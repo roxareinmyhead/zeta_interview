@@ -1,0 +1,24 @@
+Simply install the requirements and run the tool as a normal python script with no arguments
+
+pip install -r requirements.txt
+
+python3 monitor_alert.py
+
+What the script does:
+1. establish a baseline of trusted public addresses
+2. check baseline sources of truth and public documentation for deviations from baseline
+3. simulate hacker tampering with public addresses
+4. alert on deviation
+
+alert sample
+{
+    "timestamp": "2024-04-15T02:17:27.990860",
+    "url": "https://www.zetachain.com/docs/reference/contracts/",
+    "added_values": [
+        "roxcheck1"
+    ],
+    "removed_values": [
+        "0x8531a5ab847ff5b22d855633c25ed1da3255247e"
+    ],
+    "notes_for_remediation": "Review the changes and apply necessary security measures or rollbacks."
+}
